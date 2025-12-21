@@ -2,6 +2,10 @@ body{
    margin:0;
    font-family: poppins;
    background-color:skyblue;
+     display: flex;
+   justify-content: center;   
+   align-items: center;       
+   min-height: 100vh;
 }
 
 .box{
