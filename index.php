@@ -19,5 +19,6 @@
         <p>New user ? <a href="register.php">Create Account</a></p>
     </form>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
