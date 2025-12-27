@@ -4,11 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact skincare</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+}
+body{
+    background-color:#f7e8ff;
+    color:black;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:20px 60px;
+    background-color:white;
+   
+}
+
+.logo{
+    font-size:22px;
+    font-weight:600;
+    color:#6a5acd;
+}
+nav a{
+    margin:0 15px;
+    text-decoration: none;
+    color: #555;
+     font-weight:600;
+}
+nav a:hover {
+    color: #8e44ad;
+    background-color: rgba(142, 68, 173, 0.12);
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+.login-btn{
+   
+    background-color:#2ad850;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color:white;
+}
+.login-btn:hover{
+    color: #f8f7f8;
+    background-color: green;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">🪄Daily skinCare Routine Planner</div>
-        <nav></nav>
+        <nav>
+             <a href="index.html">Home  </a>
+             <a href="about.html">About</a>
+             <a href="features.html">Features</a>
+             <a href="contact.html">Contact</a>
+             <a href="login.php" class="login-btn">Login</a>
+        </nav>
     </header>
 </body>
 </html>
