@@ -32,18 +32,17 @@ header {
     font-size: 18px;
 }
 
-nav a {
-    margin-left: 20px;
+nav a{
+    margin:0 15px;
     text-decoration: none;
-    color: #4b2c5e;
-    font-weight: 600;
+    color: #555;
+     font-weight:600;
 }
-
 nav a:hover {
-    color: #f9f6fb;
-    background-color: green;
+    color: #8e44ad;
+    background-color: rgba(142, 68, 173, 0.12);
     padding: 6px 12px;
-    border-radius: 12px;
+  border-radius: 12px;
 }
 .login-btn {
     background: #3ac325;
@@ -63,20 +62,73 @@ nav a:hover {
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#f1dbff;
+    background:url("https://media.istockphoto.com/id/1546442230/photo/front-view-skin-care-products-on-wooden-decorative-piece.jpg?s=612x612&w=0&k=20&c=4qEsfqeNNAcrlzZOwMjs9mZzPBUf1ey22v0gSjt7NcY="   );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .features-hero h1{
     font-size:42px;
+    color: #070607;
 }
+.features-section{
+    max-width:1100px;
+    margin:70px auto;
+    display:flex;
+    gap:50px;
+    padding:0 20px;
+}
+
+
+.features-image{
+    flex:1;
+}
+
+.features-image img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
 .features-content{
     flex:1;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
+.features-content h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
 
+.features-content ul{
+    list-style:none;
+}
+
+.features-content li{
+    font-size:18px;
+    margin-bottom:16px;
+    padding-left:28px;
+    position:relative;
+}
+
+.features-content button{
+    background:#8fb339;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+}
 
  
+footer{
+    margin-top:60px;
+    padding:20px;
+    text-align: center;
+    background-color:white;
+}
     </style>
 </head>
 <body>
@@ -96,11 +148,7 @@ nav a:hover {
 </section>
 
 
-<section class="features-image">
-    <div>
-        <img src="skincare.png" alt="Skincare Features">
-    </div>
-
+<section class="features-section">
     <div class="features-content">
         <h2>What we offer</h2>
         <ul>
@@ -110,6 +158,11 @@ nav a:hover {
             <li>Healthy skincare habit building</li>
             <li>Simple and user-friendly interface</li>
         </ul>
+    
+      <button>Start Your Free Test</button>
+    </div>
+     <div class="features-image">
+        <img src="skincare.png" alt="Skincare products">
     </div>
 
 </section>
