@@ -29,12 +29,24 @@ nav a{
     color: #555;
      font-weight:600;
 }
+nav a:hover {
+    color: #8e44ad;
+    background-color: rgba(142, 68, 173, 0.12);
+    padding: 6px 12px;
+    border-radius: 12px;
+}
 .login-btn{
    
-    background-color:#42ef67;
+    background-color:#2ad850;
     padding: 8px 20px;
     border-radius: 20px;
     color:white;
+}
+.login-btn:hover{
+    color: #f8f7f8;
+    background-color: green;
+    padding: 6px 12px;
+    border-radius: 12px;
 }
 
 .hero{
