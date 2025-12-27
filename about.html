@@ -4,8 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About skincare</title>
-     <link rel="stylesheet" href="index.css">
-</head>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f7e8ff, #fff0f5);
+    color: #4b2c5e;
+}
+
+/* HEADER */
+header {
+    background: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4b2c5e;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #8e44ad;
+    background-color: rgba(142, 68, 173, 0.12);
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+.login-btn {
+    background: #8fb339;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+
+ .about-hero{
+            height:260px;
+            
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            background-image:
+               
+                url("skincare.png");
+
+            background-size:cover;
+            background-position:center;
+        }
+
+         .about-hero h1{
+            font-size:42px;
+            padding:16px 45px;
+            border-radius:35px;
+            color:#0a010f;
+        }
+
+        
+        .about-content{
+            max-width:900px;
+            margin:40px auto;
+            text-align:center;
+            padding:0 20px;
+        }
+
+        .about-content p{
+            font-size:26px;
+            color:#23538f;
+            line-height:1.8;
+            margin-bottom:40px;
+        }
+
+
+
+.about-card {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.about-card img {
+    width: 100%;
+
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #6b4c7a;
+}
+
+</style>
+    </head>
 <body>
     <header>
 <div class="logo">🪄Daily Skincare Routine Planner</div>
@@ -18,13 +131,19 @@
 </nav>
     </header>
 
-    <section style="padding:60px;text-align:center;>
+    <section class="about-hero">
         <h1>About us</h1>
+        </section>
+        <section class="about-content">
         <p>Our Daily Skincare Routine Planner helps you track your products, discover your skin type, and maintain healthy skin consistently.</p>
     </section>
 
+    <div  class="about-card">
+   <img src="skincare.png" alt="image not found">
+    </div>
+
     <footer>
-         © 2024 Skincare Routine Planner | Privacy Policy | Terms of Service
-    </footer>
+     © 2024 Skincare Routine Planner | Privacy Policy | Terms of Service
+</footer>
 </body>
 </html>
