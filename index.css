@@ -35,14 +35,16 @@ nav a:hover {
     padding: 6px 12px;
     border-radius: 12px;
 }
-.login-btn{
+.login-btn,
+.register-btn{
    
     background-color:#2ad850;
     padding: 8px 20px;
     border-radius: 20px;
     color:white;
 }
-.login-btn:hover{
+.login-btn:hover,
+.register-btn:hover{
     color: #f8f7f8;
     background-color: green;
     padding: 6px 12px;
