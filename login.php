@@ -2,51 +2,56 @@
 session_start();
 include "db.php";
 
+$error = "";
 
 if(isset($_POST['login'])){
-
-    $email = $_POST['email'];
+    $email = trim($_POST['email']);
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM users WHERE email='$email'";
-    $result = mysqli_query($conn, $query);
-    $user = mysqli_fetch_assoc($result);
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
+    if($row = mysqli_fetch_assoc($result)){
+    if(password_verify($password, $row['password'])){
+        $_SESSION['user_id'] = $row['user_id'];
+        $_SESSION['user_name'] = $row['name'];
 
-    if ($user && password_verify($password, $user['password'])) {
-
-        $_SESSION['user_id'] = $user['id'];
+       
 
         header("Location: questions.php");
+        exit();
     } else {
-        echo "<p style='color:red'>Invalid email or password</p>";
+        $error = "Incorrect password!";
     }
+} else {
+    $error = "Email not found!";
+}
+
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link  href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-     <div class="box glass">
-    <h2>Welcome</h2>
-    <p>Login to continue your skincare analysis</p>
+<div class="box">
+<h2>Welcome Back</h2>
+<p>Login to continue your skincare analysis</p>
 
-    
+<form method="POST" action="" autocomplete="off">
+    <input type="email" name="email" placeholder="Enter Email" required autocomplete="off">
+    <input type="password" name="password" placeholder="Enter Password" required autocomplete="new-password">
+    <button type="submit" name="login">Login</button>
+</form>
 
-    <form action="backend/login.php" method="POST">
-        <input type="email" name="email" placeholder="Enter Email" required></br>
-        <input type="password" name="password" placeholder="Enter Password" required></br>
-        <button type="submit" name="login">Login</button>
-        </form>
-        <p>New user ? <a href="register.php">Create Account</a></p>
-    
+<p style="color:red;"><?php echo $error; ?></p>
+<div class="link">New user? <a href="register.php">Create Account</a></div>
 </div>
-
 </body>
 </html>

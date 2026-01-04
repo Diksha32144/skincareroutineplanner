@@ -220,6 +220,10 @@ nav a:hover {
     font-size:16px;
     cursor: pointer;
 }
+.step-link {
+    text-decoration: none;
+    color: inherit;
+}
 .hero2 button,
 .login-card button,
 .start-btn{
