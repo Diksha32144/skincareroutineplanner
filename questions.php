@@ -8,119 +8,89 @@ include "auth_check.php";
     <title>Skin Test</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f6d1ff, #c2e9fb);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 15px;
-}
-
-
-.container {
-    width: 100%;
-    max-width: 850px;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 35px 40px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-}
-
-
-h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.subtitle {
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.question {
-    margin-top: 22px;
-    font-size: 16px;
-    color: #222;
-}
-
-.op {
-    display: block;
-    margin: 8px 0 8px 18px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.op input {
-    margin-right: 8px;
-    transform: scale(1.1);
-}
-
-
-button {
-    margin-top: 30px;
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    background: linear-gradient(135deg, #a855f7, #6366f1);
-    color: white;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
-
-
-
- </style>
+        * { margin:0;
+         padding:0; 
+        box-sizing:border-box; 
+        font-family:'Poppins', sans-serif; 
+    }
+        body {
+            min-height:100vh;
+            background: linear-gradient(135deg, #f6d1ff, #c2e9fb);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px 15px;
+        }
+        .container {
+            width:100%;
+            max-width:850px;
+            background: rgba(255,255,255,0.35);
+            backdrop-filter: blur(12px);
+            border-radius:20px;
+            padding:35px 40px;
+            box-shadow:0 10px 35px rgba(0,0,0,0.15);
+        }
+        h2 {
+         text-align:center;
+         font-size:28px;
+          margin-bottom:8px;
+           }
+        .subtitle {
+         text-align:center; font-size:15px; margin-bottom:30px; color:#333; }
+        .question { margin-top:22px; font-size:16px; color:#222; }
+        .op { display:block; margin:8px 0 8px 18px; font-size:15px; cursor:pointer; }
+        .op input { margin-right:8px; transform:scale(1.1); }
+        button {
+            margin-top:30px;
+            width:100%;
+            padding:14px;
+            font-size:16px;
+            font-weight:600;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            background: linear-gradient(135deg, #a855f7, #6366f1);
+            color:white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover { transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.25); }
+    </style>
 </head>
 <body>
+
 <div class="container">
-<h2>🧴 Complete Skin Analysis Test</h2>
-<p>Answer all questions honestly</p>
+    <h2>🧴 Complete Skin Analysis Test</h2>
+    <p>Answer all questions honestly</p>
 
-<form method="POST" action="result.php">
 
-<!-- Q1 -->
-<p class="question"><b>1. How does your skin feel right after cleansing?</b></p>
-<label class="op"><input type="radio" name="q1" value="dry" required> Very tight and dry</label>
-<label class="op"><input type="radio" name="q1" value="oily"> Oily and greasy</label>
-<label class="op"><input type="radio" name="q1" value="normal"> Balanced / comfortable</label>
-<label class="op"><input type="radio" name="q1" value="combination"> Dry in some areas, oily in T-zone</label>
-<label class="op"><input type="radio" name="q1" value="sensitive"> Red, itchy, or stings</label>
+    <form method="POST" action="result.php">
 
-<!-- Q2 -->
-<p class="question"><b>2. How often does your skin look shiny during the day?</b></p>
-<label class="op"><input type="radio" name="q2" value="oily" required> Almost always</label>
-<label class="op"><input type="radio" name="q2" value="combination"> Only T-zone</label>
-<label class="op"><input type="radio" name="q2" value="dry"> Rarely</label>
-<label class="op"><input type="radio" name="q2" value="normal"> Occasionally</label>
-<label class="op"><input type="radio" name="q2" value="sensitive"> With redness or irritation</label>
+        <!-- Q1 -->
+        <p class="question"><b>1. How does your skin feel right after cleansing?</b></p>
+        <label class="op"><input type="radio" name="q1" value="dry" required> Very tight and dry</label>
+        <label class="op"><input type="radio" name="q1" value="oily"> Oily and greasy</label>
+        <label class="op"><input type="radio" name="q1" value="normal"> Balanced / comfortable</label>
+        <label class="op"><input type="radio" name="q1" value="combination"> Dry in some areas, oily in T-zone</label>
+        <label class="op"><input type="radio" name="q1" value="sensitive"> Red, itchy, or stings</label>
 
-<!-- Q3 -->
-<p class="question"><b>3. How often do you experience breakouts/pimples?</b></p>
-<label class="op"><input type="radio" name="q3" value="oily" required> Very often</label>
-<label class="op"><input type="radio" name="q3" value="combination"> Sometimes, mostly T-zone</label>
-<label class="op"><input type="radio" name="q3" value="normal"> Rarely</label>
-<label class="op"><input type="radio" name="q3" value="dry"> Almost never</label>
-<label class="op"><input type="radio" name="q3" value="sensitive"> After using new products</label>
+        <!-- Q2 -->
+        <p class="question"><b>2. How often does your skin look shiny during the day?</b></p>
+        <label class="op"><input type="radio" name="q2" value="oily" required> Almost always</label>
+        <label class="op"><input type="radio" name="q2" value="combination"> Only T-zone</label>
+        <label class="op"><input type="radio" name="q2" value="dry"> Rarely</label>
+        <label class="op"><input type="radio" name="q2" value="normal"> Occasionally</label>
+        <label class="op"><input type="radio" name="q2" value="sensitive"> With redness or irritation</label>
+
+        <!-- Q3 -->
+        <p class="question"><b>3. How often do you experience breakouts/pimples?</b></p>
+        <label class="op"><input type="radio" name="q3" value="oily" required> Very often</label>
+        <label class="op"><input type="radio" name="q3" value="combination"> Sometimes, mostly T-zone</label>
+        <label class="op"><input type="radio" name="q3" value="normal"> Rarely</label>
+        <label class="op"><input type="radio" name="q3" value="dry"> Almost never</label>
+        <label class="op"><input type="radio" name="q3" value="sensitive"> After using new products</label>
+
+       
+
 
 <!-- Q4 -->
 <p class="question"><b>4. How does your skin feel by evening?</b></p>
@@ -226,10 +196,10 @@ button:hover {
 <label class="op"><input type="radio" name="q16" value="oily"> No effect</label>
 <label class="op"><input type="radio" name="q16" value="dry"> No effect</label>
 
-<br>
-<button type="submit">Get My Skin Type</button>
-
-</form>
+        <br>
+        <button type="submit">Get My Skin Type</button>
+    </form>
 </div>
+
 </body>
 </html>
