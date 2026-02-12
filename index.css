@@ -36,6 +36,7 @@ nav a:hover {
     border-radius: 12px;
 }
 .login-btn,
+.logout-btn,
 .register-btn{
    
     background-color:#2ad850;
@@ -43,7 +44,9 @@ nav a:hover {
     border-radius: 20px;
     color:white;
 }
+
 .login-btn:hover,
+.logout-btn:hover,
 .register-btn:hover{
     color: #f8f7f8;
     background-color: green;

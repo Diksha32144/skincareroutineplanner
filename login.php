@@ -18,17 +18,22 @@ if(isset($_POST['login'])){
     if(password_verify($password, $row['password'])){
         $_SESSION['user_id'] = $row['user_id'];
         $_SESSION['user_name'] = $row['name'];
-
+        $_SESSION['role'] = $row['role'];
        
-
-        header("Location: questions.php");
+ if($row['role'] == 'admin'){
+            header("Location: admin/products.php");
+        } else {
+            header("Location: questions.php");
+        }
         exit();
+
     } else {
         $error = "Incorrect password!";
     }
 } else {
     $error = "Email not found!";
 }
+      
 
 }
 ?>

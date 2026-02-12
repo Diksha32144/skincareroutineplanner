@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $query);
 <h2>🧴 Product Management</h2>
 
 <div class="top">
-    <a class="button" href="addproduct.php">+ Add New Product</a>
+    <a class="button" href="./addproduct.php">+ Add New Product</a>
 </div>
 
 <table>

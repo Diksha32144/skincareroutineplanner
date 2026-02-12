@@ -20,6 +20,8 @@
         <a href="contact.html">Contact</a>
         <a href="login.php" class="login-btn">Login</a>
         <a href="register.php" class="register-btn">Register</a>
+        
+
     </nav>
     </header>
 
@@ -33,12 +35,17 @@
          <button>Get Started</button>
 </div>
 
-<div class="login-card">
+<form method="POST" action="login.php" class="login-card" autocomplete="off">
+
 <h3>Welcome Back</h3>
-<input type="email" placeholder="Enter email"><br>
-<input type="password" placeholder="Enter password">
-<button>Sign In</button>
-</div>
+
+<input type="email" name="email" placeholder="Enter email" required><br>
+
+<input type="password" name="password" placeholder="Enter password" required><br>
+
+<button type="submit" name="login">Sign In</button>
+
+</form>
     </section>
 
 

@@ -1,1 +1,1 @@
-console.log(" Dailt Skincare Routine website loaded successfully");
+console.log(" Daily Skincare Routine website loaded successfully");
